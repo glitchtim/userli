@@ -5,18 +5,14 @@
     <link>/userli/development/</link>
     <description>Recent content in Development on Userli Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="/userli/development/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="/userli/development/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Documentation</title>
       <link>/userli/development/documentation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/userli/development/documentation/</guid>
-      <description>This page describes how to edit the documentation you&#39;re currently reading. The whole documentation is located in the directory hugo. Change into this directory. All following commands are supposed to be run from here.
+      <description>This page describes how to edit the documentation you&amp;rsquo;re currently reading. The whole documentation is located in the directory hugo. Change into this directory. All following commands are supposed to be run from here.
 cd hugo Requirements Download Hugo binary for your OS (Windows, Linux, Mac).
 Editing Change files in hugo/content to edit the documentation. See the DocDock documentation for more information on how to organize content. Afterwards, commit your work to your repository.</description>
     </item>
@@ -56,6 +52,16 @@ Our Standards Examples of behavior that contributes to creating a positive envir
       
       <guid>/userli/development/tests/</guid>
       <description>Linting, unit tests and functional tests vagrant up &amp;amp;&amp;amp; vagrant ssh make test make integration  Test checkpassword script vagrant up &amp;amp;&amp;amp; vagrant ssh bin/console doctrine:schema:create -n &amp;amp;&amp;amp; bin/console doctrine:fixture:load -n &amp;amp;&amp;amp; exit cd .. &amp;amp;&amp;amp; tests/test_checkpassword_login.sh  </description>
+    </item>
+    
+    <item>
+      <title>Icons</title>
+      <link>/userli/development/icons/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userli/development/icons/</guid>
+      <description>We&amp;rsquo;re using Githubs Octicons v9 for icons on the index page. Icons from V10 onwards look a bit different and don&amp;rsquo;t allign with earlier ones.
+All icons should be 14*14 px, #333333 on transparent background without padding.</description>
     </item>
     
   </channel>

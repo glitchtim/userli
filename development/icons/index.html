@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="revised" content="2021-08-11T19:59:12 CEST">
-<title>Configuration :: Userli Documentation</title>
+<title>Icons :: Userli Documentation</title>
 <link rel="shortcut icon" href="/userli/images/favicon.png" type="image/x-icon" />
 <link href="/userli/css/nucleus.css" rel="stylesheet">
 <link href="/userli/css/font-awesome.min.css" rel="stylesheet">
@@ -21,12 +21,12 @@
     display:none !important;
   }
 </style>
-<meta name="description" content="">
+<meta name="description" content="Where to get icons">
 
 
     
   </head>
-  <body data-url="/userli/installation/configuration/">
+  <body data-url="/userli/development/icons/">
     
       <div id="headermain"></div>
 <nav id="sidebar" class="showVisitedLinks">
@@ -274,7 +274,7 @@
       
       
     <div id="top-github-link">
-      <a class="github-link" href="https://github.com/systemli/userli/edit/master/hugo/content/installation/configuration.md" target="blank">
+      <a class="github-link" href="https://github.com/systemli/userli/edit/master/hugo/content/development/icons.md" target="blank">
         <i class="fa fa-code-fork"></i>
         Improve this page
       </a>
@@ -294,7 +294,7 @@
 
 
 
- <a href='/userli/'>Userli Documentation</a> > <a href='/userli/installation/'>Installation</a> > Configuration
+ <a href='/userli/'>Userli Documentation</a> > <a href='/userli/development/'>Development</a> > Icons
 
  
 
@@ -317,7 +317,7 @@
 
 <div id="body-inner">
   
-    <h1>Configuration</h1>
+    <h1>Icons</h1>
   
 
 
@@ -325,19 +325,10 @@
     
     
     
-    <p>You can personalize your Userli instance by creating <code>.env.local</code>,
-which overrides some values from <code>.env</code>. You should at least configure
-the following values.</p>
-<pre><code>APP_ENV=prod
-APP_SECRET=&lt;random secret string&gt;
-APP_URL=https://users.example.org
-DATABASE_URL=mysql://userli:&lt;password&gt;@127.0.0.1:3306/userli
-MAILER_URL=smtp://localhost:25?encryption=&amp;auth_mode=
-PROJECT_NAME=example.org
-PROJECT_URL=https://www.example.org
-SENDER_ADDRESS=userli@example.org
-NOTIFICATION_ADDRESS=admin@example.org
-</code></pre><p>Look into <code>.env</code> to get more information about variables and how to handle them.</p>
+    <p>We&rsquo;re using <a href="https://github.com/primer/octicons/releases/tag/v9.6.0">Githubs Octicons v9</a> for icons on the index page.
+Icons from V10 onwards look a bit different and don&rsquo;t allign with earlier ones.</p>
+<p>All icons should be 14*14 px, #333333 on transparent background without padding.</p>
+
 
     
     
@@ -348,8 +339,8 @@ NOTIFICATION_ADDRESS=admin@example.org
 </div>
 
 <div id="navigation">
-<a class="nav nav-prev" href="/userli/installation/code/" title="Get the code"> <i class="fa fa-chevron-left"></i><label>Get the code</label></a>
-    <a class="nav nav-next" href="/userli/installation/finalize/" title="Finalize the setup" style="margin-right: 0px;"><label>Finalize the setup</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/userli/development/tests/" title="Tests"> <i class="fa fa-chevron-left"></i><label>Tests</label></a>
+    <a class="nav nav-next" href="/userli/mail_crypt/" title="MailCrypt" style="margin-right: 0px;"><label>MailCrypt</label><i class="fa fa-chevron-right"></i></a></div>
 
 </section>
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">

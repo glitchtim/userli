@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2020-01-06T08:24:47 CET">
+<meta name="revised" content="2021-08-11T19:59:12 CEST">
 <title>Implementation details :: Userli Documentation</title>
 <link rel="shortcut icon" href="/userli/images/favicon.png" type="image/x-icon" />
 <link href="/userli/css/nucleus.css" rel="stylesheet">
@@ -16,7 +16,6 @@
 <link href="/userli/theme-original/style.css" rel="stylesheet">
 
 <link rel="stylesheet" href="/userli/css/bootstrap.min.css">
-<script src="/userli/js/jquery-2.x.min.js"></script>
 <style type="text/css">
   :root #header + #content > #left > #rlblock_left {
     display:none !important;
@@ -50,14 +49,6 @@
 		    <input data-search-input id="search-by" type="text" placeholder="Search...">
 		    <span data-search-clear=""><i class="fa fa-close"></i></span>
 		</div>
-		<script type="text/javascript" src="/userli/js/lunr.min.js"></script>
-		<script type="text/javascript" src="/userli/js/auto-complete.js"></script>
-		<script type="text/javascript">
-        
-            var baseurl = "\/userli";
-        
-		</script>
-		<script type="text/javascript" src="/userli/js/search.js"></script>
   </div>
 
       <ul class="topics">
@@ -172,13 +163,19 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/userli/development/icons/" class="dd-item">
+        <div>
+          <a href="/userli/development/icons/">
+            Icons
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
         </ul>
     </li>
-    <li data-nav-id="/userli/mail_crypt/" class="dd-item parent haschildren
+    <li data-nav-id="/userli/mail_crypt/" class="dd-item haschildren
         ">
       <div>
-      <a href="/userli/mail_crypt/">MailCrypt</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      <a href="/userli/mail_crypt/">MailCrypt</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/userli/mail_crypt/legacy/" class="dd-item">
@@ -188,7 +185,7 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/userli/mail_crypt/details/" class="dd-item active">
+      <li data-nav-id="/userli/mail_crypt/details/" class="dd-item">
         <div>
           <a href="/userli/mail_crypt/details/">
             Implementation details
@@ -196,6 +193,12 @@
         </div>
     </li>
         </ul>
+    </li>
+    <li data-nav-id="/userli/wkd/" class="dd-item
+        ">
+      <div>
+      <a href="/userli/wkd/">Web Key Directory</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
     </li>
     <li data-nav-id="/userli/screenshots/" class="dd-item haschildren
         ">
@@ -244,8 +247,8 @@
 
 
         <section id="shortcuts">
-                <li class="" role=""><h3>More</h3><a href="https://github.com/systemli/userli/" target="_blank" rel="noopener"><i class='fa fa-github'></i> <label>Github repo</label></a></li>
-                <li class="" role=""><a href="https://github.com/systemli/userli/releases/latest" target="_blank" rel="noopener"><i class='fa fa-cloud-download'></i> <label>Download</label></a></li>
+                <li class="" role=""><h3>More</h3><a href="https://github.com/systemli/userli/" rel="noopener"><i class='fa fa-github'></i> <label>Github repo</label></a></li>
+                <li class="" role=""><a href="https://github.com/systemli/userli/releases/latest" rel="noopener"><i class='fa fa-cloud-download'></i> <label>Download</label></a></li>
         </section>
             <a id="clear-history" class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Clear History</a>
 
@@ -323,10 +326,10 @@
     
     
     <p>We use elliptic curve keys with curve secp521r1. The private key is encrypted
-with a libargon2i hash of the users&rsquo; password, stored in a libsodium secret
+with a libargon2i hash of the users' password, stored in a libsodium secret
 box.</p>
 <p>A second copy of the private key is stored encrypted with a libargon2i hash of
-the users&rsquo; recovery token, to be used when a user restores their account after
+the users' recovery token, to be used when a user restores their account after
 they lost their password.</p>
 
 
@@ -340,21 +343,34 @@ they lost their password.</p>
 
 <div id="navigation">
 <a class="nav nav-prev" href="/userli/mail_crypt/legacy/" title="Migrating legacy users"> <i class="fa fa-chevron-left"></i><label>Migrating legacy users</label></a>
-    <a class="nav nav-next" href="/userli/screenshots/" title="Screenshots" style="margin-right: 0px;"><label>Screenshots</label><i class="fa fa-chevron-right"></i></a></div>
+    <a class="nav nav-next" href="/userli/wkd/" title="Web Key Directory" style="margin-right: 0px;"><label>Web Key Directory</label><i class="fa fa-chevron-right"></i></a></div>
 
 </section>
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
   <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>    
 
+<script src="/userli/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/userli";
+    
+</script>
 <script src="/userli/js/clipboard.min.js"></script>
 <script src="/userli/js/featherlight.min.js"></script>
 <script src="/userli/js/html5shiv-printshiv.min.js"></script>
 
 <script src="/userli/js/modernizr.custom.71422.js"></script>
 <script src="/userli/js/docdock.js"></script>
+<script type="text/javascript" src="/userli/js/lunr.min.js"></script>
+<script type="text/javascript" src="/userli/js/auto-complete.js"></script>
+<script type="text/javascript" src="/userli/js/search.js"></script>
 <script src="/userli/theme-original/script.js"></script>
 
+
+
+
+<script src="/userli/js/scripts.min.js"></script>
 
     
 

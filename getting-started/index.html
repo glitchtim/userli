@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2020-01-06T08:24:47 CET">
+<meta name="revised" content="2021-08-11T19:59:12 CEST">
 <title>Getting Started :: Userli Documentation</title>
 <link rel="shortcut icon" href="/userli/images/favicon.png" type="image/x-icon" />
 <link href="/userli/css/nucleus.css" rel="stylesheet">
@@ -16,7 +16,6 @@
 <link href="/userli/theme-original/style.css" rel="stylesheet">
 
 <link rel="stylesheet" href="/userli/css/bootstrap.min.css">
-<script src="/userli/js/jquery-2.x.min.js"></script>
 <style type="text/css">
   :root #header + #content > #left > #rlblock_left {
     display:none !important;
@@ -50,18 +49,10 @@
 		    <input data-search-input id="search-by" type="text" placeholder="Search...">
 		    <span data-search-clear=""><i class="fa fa-close"></i></span>
 		</div>
-		<script type="text/javascript" src="/userli/js/lunr.min.js"></script>
-		<script type="text/javascript" src="/userli/js/auto-complete.js"></script>
-		<script type="text/javascript">
-        
-            var baseurl = "\/userli";
-        
-		</script>
-		<script type="text/javascript" src="/userli/js/search.js"></script>
   </div>
 
       <ul class="topics">
-    <li data-nav-id="/userli/getting-started/" class="dd-item parent active alwaysopen
+    <li data-nav-id="/userli/getting-started/" class="dd-item alwaysopen
         ">
       <div>
       <a href="/userli/getting-started/">Getting Started</a><i class="fa fa-circle-thin read-icon"></i>
@@ -172,6 +163,13 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/userli/development/icons/" class="dd-item">
+        <div>
+          <a href="/userli/development/icons/">
+            Icons
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/userli/mail_crypt/" class="dd-item haschildren
@@ -195,6 +193,12 @@
         </div>
     </li>
         </ul>
+    </li>
+    <li data-nav-id="/userli/wkd/" class="dd-item
+        ">
+      <div>
+      <a href="/userli/wkd/">Web Key Directory</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
     </li>
     <li data-nav-id="/userli/screenshots/" class="dd-item haschildren
         ">
@@ -243,8 +247,8 @@
 
 
         <section id="shortcuts">
-                <li class="" role=""><h3>More</h3><a href="https://github.com/systemli/userli/" target="_blank" rel="noopener"><i class='fa fa-github'></i> <label>Github repo</label></a></li>
-                <li class="" role=""><a href="https://github.com/systemli/userli/releases/latest" target="_blank" rel="noopener"><i class='fa fa-cloud-download'></i> <label>Download</label></a></li>
+                <li class="" role=""><h3>More</h3><a href="https://github.com/systemli/userli/" rel="noopener"><i class='fa fa-github'></i> <label>Github repo</label></a></li>
+                <li class="" role=""><a href="https://github.com/systemli/userli/releases/latest" rel="noopener"><i class='fa fa-cloud-download'></i> <label>Download</label></a></li>
         </section>
             <a id="clear-history" class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Clear History</a>
 
@@ -319,8 +323,8 @@
 
 <p>The easiest way to install Userli on a fresh Debian Buster is running these commands:</p>
 <pre><code># install dependencies
-sudo apt install -y python-pip git
-sudo pip install molecule  # re-run in case of error
+sudo apt update &amp;&amp; sudo apt install -y ansible git python3-pip
+sudo pip3 install molecule  # re-run in case of error
 
 # get code
 git clone https://github.com/systemli/ansible-role-userli.git
@@ -331,13 +335,16 @@ sudo molecule converge -s localhost
 </code></pre>
 <p>This installs all dependencies, creates a database and database user
 (name: userli, password: userli), and installs the userli code at <code>/var/www/userli</code>.
-It is accessible via http://localhost:8080.</p>
-<!-- raw HTML omitted -->
-<p>role=&quot;alert&quot;&gt;Do not run this configuration in production.<!-- raw HTML omitted --></p>
+It is accessible via <a href="http://localhost:8080">http://localhost:8080</a>.
+There, you can create the first domain and user for your instance.</p>
+
+<div class="alert alert-danger" role="alert">Do not run this configuration in production.</div>
+
 <p>Next, you would have to change the password of the database user,
 <a href="../installation/configuration">configure your instance</a>,
 and probably install Dovecot to do anything meaningful.</p>
-<p>Better, do a <a href="../installation">manual installation</a> to understand each part of your configuration.</p>
+<p>Better, do a <a href="../installation">manual installation</a> to understand each part of your
+configuration.</p>
 
 
 
@@ -358,14 +365,27 @@ and probably install Dovecot to do anything meaningful.</p>
   <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>    
 
+<script src="/userli/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/userli";
+    
+</script>
 <script src="/userli/js/clipboard.min.js"></script>
 <script src="/userli/js/featherlight.min.js"></script>
 <script src="/userli/js/html5shiv-printshiv.min.js"></script>
 
 <script src="/userli/js/modernizr.custom.71422.js"></script>
 <script src="/userli/js/docdock.js"></script>
+<script type="text/javascript" src="/userli/js/lunr.min.js"></script>
+<script type="text/javascript" src="/userli/js/auto-complete.js"></script>
+<script type="text/javascript" src="/userli/js/search.js"></script>
 <script src="/userli/theme-original/script.js"></script>
 
+
+
+
+<script src="/userli/js/scripts.min.js"></script>
 
     
 

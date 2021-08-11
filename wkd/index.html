@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="revised" content="2021-08-11T19:59:12 CEST">
-<title>Configuration :: Userli Documentation</title>
+<title>Web Key Directory :: Userli Documentation</title>
 <link rel="shortcut icon" href="/userli/images/favicon.png" type="image/x-icon" />
 <link href="/userli/css/nucleus.css" rel="stylesheet">
 <link href="/userli/css/font-awesome.min.css" rel="stylesheet">
@@ -26,7 +26,7 @@
 
     
   </head>
-  <body data-url="/userli/installation/configuration/">
+  <body data-url="/userli/wkd/">
     
       <div id="headermain"></div>
 <nav id="sidebar" class="showVisitedLinks">
@@ -274,7 +274,7 @@
       
       
     <div id="top-github-link">
-      <a class="github-link" href="https://github.com/systemli/userli/edit/master/hugo/content/installation/configuration.md" target="blank">
+      <a class="github-link" href="https://github.com/systemli/userli/edit/master/hugo/content/wkd/_index.md" target="blank">
         <i class="fa fa-code-fork"></i>
         Improve this page
       </a>
@@ -291,12 +291,7 @@
 
 
 
-
-
-
- <a href='/userli/'>Userli Documentation</a> > <a href='/userli/installation/'>Installation</a> > Configuration
-
- 
+ <a href='/userli/'>Userli Documentation</a> > Web Key Directory
 
  
 
@@ -317,7 +312,7 @@
 
 <div id="body-inner">
   
-    <h1>Configuration</h1>
+    <h1>Web Key Directory</h1>
   
 
 
@@ -325,19 +320,27 @@
     
     
     
-    <p>You can personalize your Userli instance by creating <code>.env.local</code>,
-which overrides some values from <code>.env</code>. You should at least configure
-the following values.</p>
-<pre><code>APP_ENV=prod
-APP_SECRET=&lt;random secret string&gt;
-APP_URL=https://users.example.org
-DATABASE_URL=mysql://userli:&lt;password&gt;@127.0.0.1:3306/userli
-MAILER_URL=smtp://localhost:25?encryption=&amp;auth_mode=
-PROJECT_NAME=example.org
-PROJECT_URL=https://www.example.org
-SENDER_ADDRESS=userli@example.org
-NOTIFICATION_ADDRESS=admin@example.org
-</code></pre><p>Look into <code>.env</code> to get more information about variables and how to handle them.</p>
+
+<p>Userli brings support for <a href="https://gnupg.org/faq/wkd.html">OpenPGP Web Key
+Directory</a>, a OpenPGP key discovery system.
+Users can import and update their OpenPGP key and it will be published in the
+Web Key Directory according to the <a href="https://datatracker.ietf.org/doc/draft-koch-openpgp-webkey-service">OpenPGP Web Key Directory Internet
+Draft</a>.</p>
+<p>The WKD feature depends on <a href="https://gnupg.org/">GnuPG</a> being installed.</p>
+<p>The WKD directory path can be configured by setting <code>WKD_DIRECTORY</code> in the
+dotenv (<code>.env</code>) file. Write access to the WKD directory is required.</p>
+<p>The WKD directory format can be configured by setting <code>WKD_FORMAT</code> in the
+dotenv (<code>.env</code>) file. The supported settings are <code>advanced</code> (default) and
+<code>direct</code>. See the <a href="https://datatracker.ietf.org/doc/draft-koch-openpgp-webkey-service">OpenPGP Web Key Directory Internet
+Draft</a>
+for details.</p>
+<p>The WKD directory can be regenerated at any time by running the console
+command:</p>
+<pre><code>bin/console app:wkd:export-keys
+</code></pre>
+<!-- raw HTML omitted -->
+
+
 
     
     
@@ -348,8 +351,8 @@ NOTIFICATION_ADDRESS=admin@example.org
 </div>
 
 <div id="navigation">
-<a class="nav nav-prev" href="/userli/installation/code/" title="Get the code"> <i class="fa fa-chevron-left"></i><label>Get the code</label></a>
-    <a class="nav nav-next" href="/userli/installation/finalize/" title="Finalize the setup" style="margin-right: 0px;"><label>Finalize the setup</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/userli/mail_crypt/details/" title="Implementation details"> <i class="fa fa-chevron-left"></i><label>Implementation details</label></a>
+    <a class="nav nav-next" href="/userli/screenshots/" title="Screenshots" style="margin-right: 0px;"><label>Screenshots</label><i class="fa fa-chevron-right"></i></a></div>
 
 </section>
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">

@@ -5,11 +5,7 @@
     <link>/userli/installation/</link>
     <description>Recent content in Installation on Userli Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="/userli/installation/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="/userli/installation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create database</title>
       <link>/userli/installation/database/</link>
@@ -63,7 +59,7 @@ the following values.&lt;/p&gt;</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/userli/installation/customize/</guid>
-      <description>You can override translation strings individually by putting them into override localization files at translations/&amp;lt;lang&amp;gt;/messages.&amp;lt;lang&amp;gt;.yml.</description>
+      <description>You can override translation strings individually by putting them into override localization files at translations/&amp;lt;lang&amp;gt;/messages.&amp;lt;lang&amp;gt;.yml. Don&amp;rsquo;t forget to clear the cache with bin/console cache:clear afterwards.</description>
     </item>
     
     <item>
@@ -74,7 +70,7 @@ the following values.&lt;/p&gt;</description>
       <guid>/userli/installation/checkpassword/</guid>
       <description>&lt;p&gt;The PHP console command &lt;code&gt;bin/console app:users:checkpassword&lt;/code&gt; provides a
 checkpassword command to be used for authentication (userdb and passdb
-lookup) by external services. So far, it&#39;s only tested with Dovecot.&lt;/p&gt;</description>
+lookup) by external services. So far, it&amp;rsquo;s only tested with Dovecot.&lt;/p&gt;</description>
     </item>
     
     <item>

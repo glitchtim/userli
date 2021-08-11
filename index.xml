@@ -5,11 +5,7 @@
     <link>/userli/</link>
     <description>Recent content on Userli Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="/userli/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="/userli/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create database</title>
       <link>/userli/installation/database/</link>
@@ -25,7 +21,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/userli/development/documentation/</guid>
-      <description>This page describes how to edit the documentation you&#39;re currently reading. The whole documentation is located in the directory hugo. Change into this directory. All following commands are supposed to be run from here.
+      <description>This page describes how to edit the documentation you&amp;rsquo;re currently reading. The whole documentation is located in the directory hugo. Change into this directory. All following commands are supposed to be run from here.
 cd hugo Requirements Download Hugo binary for your OS (Windows, Linux, Mac).
 Editing Change files in hugo/content to edit the documentation. See the DocDock documentation for more information on how to organize content. Afterwards, commit your work to your repository.</description>
     </item>
@@ -38,7 +34,7 @@ Editing Change files in hugo/content to edit the documentation. See the DocDock 
       <guid>/userli/mail_crypt/legacy/</guid>
       <description>&lt;p&gt;Legacy users (without MailCrypt keys) continue to work without mailbox
 encryption. If they generate a recovery token manually in the account settings,
-a MailCrypt key pair gets created for them. This doesn&#39;t enable MailCrypt for
+a MailCrypt key pair gets created for them. This doesn&amp;rsquo;t enable MailCrypt for
 them automatically, though. Reason is that this would result in acounts with
 partially unencrypted (the old) and partially encrypted (the new) mails.
 Therefore we decided to leave the exercise to enable MailCrypt for legacy
@@ -89,8 +85,8 @@ Our Standards Examples of behavior that contributes to creating a positive envir
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/userli/mail_crypt/details/</guid>
-      <description>We use elliptic curve keys with curve secp521r1. The private key is encrypted with a libargon2i hash of the users&amp;rsquo; password, stored in a libsodium secret box.
-A second copy of the private key is stored encrypted with a libargon2i hash of the users&amp;rsquo; recovery token, to be used when a user restores their account after they lost their password.</description>
+      <description>We use elliptic curve keys with curve secp521r1. The private key is encrypted with a libargon2i hash of the users&#39; password, stored in a libsodium secret box.
+A second copy of the private key is stored encrypted with a libargon2i hash of the users&#39; recovery token, to be used when a user restores their account after they lost their password.</description>
     </item>
     
     <item>
@@ -182,7 +178,17 @@ the following values.&lt;/p&gt;</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/userli/installation/customize/</guid>
-      <description>You can override translation strings individually by putting them into override localization files at translations/&amp;lt;lang&amp;gt;/messages.&amp;lt;lang&amp;gt;.yml.</description>
+      <description>You can override translation strings individually by putting them into override localization files at translations/&amp;lt;lang&amp;gt;/messages.&amp;lt;lang&amp;gt;.yml. Don&amp;rsquo;t forget to clear the cache with bin/console cache:clear afterwards.</description>
+    </item>
+    
+    <item>
+      <title>Icons</title>
+      <link>/userli/development/icons/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userli/development/icons/</guid>
+      <description>We&amp;rsquo;re using Githubs Octicons v9 for icons on the index page. Icons from V10 onwards look a bit different and don&amp;rsquo;t allign with earlier ones.
+All icons should be 14*14 px, #333333 on transparent background without padding.</description>
     </item>
     
     <item>
@@ -193,7 +199,7 @@ the following values.&lt;/p&gt;</description>
       <guid>/userli/installation/checkpassword/</guid>
       <description>&lt;p&gt;The PHP console command &lt;code&gt;bin/console app:users:checkpassword&lt;/code&gt; provides a
 checkpassword command to be used for authentication (userdb and passdb
-lookup) by external services. So far, it&#39;s only tested with Dovecot.&lt;/p&gt;</description>
+lookup) by external services. So far, it&amp;rsquo;s only tested with Dovecot.&lt;/p&gt;</description>
     </item>
     
     <item>
